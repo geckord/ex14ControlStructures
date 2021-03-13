@@ -24,7 +24,7 @@ int main()
 
         double bmr;
         if ((gender == 'M') || (gender == 'm')) bmr = 13.75 * mass + 5.003 * height - 6.775 * age + 66.5;
-        else if ((gender == 'F') || (gender == 'f')) bmr = 9.563 * mass + 1.850 * height - 4.676 * age + 655.1;
+        else bmr = 9.563 * mass + 1.850 * height - 4.676 * age + 655.1;
 
         char exercise;
         cout << "Please enter your physical activity frequency ([N]o/[L]ight/[F]requent): ";
@@ -33,7 +33,7 @@ int main()
         double dailyCaloriesNeed;
         if ((exercise == 'N') || (exercise == 'n')) dailyCaloriesNeed = bmr * 1.2;
         else if ((exercise == 'L') || (exercise == 'l')) dailyCaloriesNeed = bmr * 1.375;
-        else if ((exercise == 'F') || (exercise == 'f')) dailyCaloriesNeed = bmr * 1.725;
+        else dailyCaloriesNeed = bmr * 1.725;
 
         cout << "You need " << dailyCaloriesNeed << " calories daily." << endl;
     }
